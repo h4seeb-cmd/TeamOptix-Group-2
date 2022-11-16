@@ -22,9 +22,9 @@ import edu.wpi.first.wpilibj2.command.button.JoystickButton;
  */
 public class RobotContainer {
   // The robot's subsystems and commands are defined here...
-  private final Shooter shooterSubsystem = new Shooter();
+  private final Intake shooterSubsystem = new Intake();
 
-  private final UpperShoot shooterCommand = new UpperShoot(shooterSubsystem);
+  private final UpperShoot shooterCommand = new UpperShoot();
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
@@ -41,7 +41,7 @@ public class RobotContainer {
   private void configureButtonBindings() {
     XboxController exBox = new XboxController(0);
     JoystickButton joySteck = new JoystickButton(exBox, Button.kY.value);
-    joySteck.whenHeld(shooterCommand);
+    joySteck.whenHeld();
   }
 
   /**
