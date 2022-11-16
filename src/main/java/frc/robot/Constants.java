@@ -14,6 +14,7 @@ package frc.robot;
  */
 public final class Constants {
     public static final class Intake {
-        public static final int ;
+        public static final int intake_motor;
+        public static final int piston;
     }
 }
