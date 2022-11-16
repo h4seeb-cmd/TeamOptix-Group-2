@@ -1,10 +1,11 @@
 package frc.robot.subsystems;
 
+import com.ctre.phoenix.motorcontrol.can.WPI_TalonFX;
 import edu.wpi.first.wpilibj.motorcontrol.MotorControllerGroup;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
 
-import com.ctre.phoenix.motorcontrol.can.WPI_TalonFX;
+
 
 public class Drivetrain extends SubsystemBase{
     private WPI_TalonFX rightFrontMotor = new WPI_TalonFX(Constants.Drivetrain.right_front);
