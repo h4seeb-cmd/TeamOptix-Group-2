@@ -15,6 +15,7 @@ package frc.robot;
 public final class Constants {
     public static final class Intake {
         public static final int intake_motor;
-        public static final int piston;
+        public static final int soleinoid_port_one = 1;
+        public static final int soleinoid_port_two = 2;
     }
 }
