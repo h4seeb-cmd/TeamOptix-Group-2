@@ -15,6 +15,7 @@ package frc.robot;
 public final class Constants {
     public static final class Intake {
         public static final int intake_motor = 0; //neo motor port should be changed
+        public static final double intake_speed = 0.5;
         public static final int soleinoid_one_forward = 1;
         public static final int soleinoid_one_backward = 2;
         public static final int soleinoid_two_forward = 4;
