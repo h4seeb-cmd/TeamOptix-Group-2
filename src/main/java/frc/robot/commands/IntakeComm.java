@@ -11,11 +11,8 @@ import edu.wpi.first.wpilibj2.command.CommandBase;
 /** An example command that uses an example subsystem. */
 public class IntakeComm extends CommandBase {
   @SuppressWarnings({"PMD.UnusedPrivateField", "PMD.SingularField"})
-<<<<<<< HEAD
   private final Intake mintake;
-=======
-  private final Intake intake;
->>>>>>> 1d4f12d43e0364eb263a10e0cb37b63e561e0a84
+
 
   /**
    * Creates a new ExampleCommand.
@@ -23,11 +20,7 @@ public class IntakeComm extends CommandBase {
    * @param subsystem The subsystem used by this command.
    */
   public IntakeComm(Intake subsystem) {
-<<<<<<< HEAD
     mintake = subsystem;
-=======
-    intake = subsystem;
->>>>>>> c08847381f0c060a625624a19f71664e9bbafe5f
     // Use addRequirements() here to declare subsystem dependencies.
     addRequirements(mintake);
 
