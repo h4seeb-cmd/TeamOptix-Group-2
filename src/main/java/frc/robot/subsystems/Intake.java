@@ -19,15 +19,18 @@ import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 
 public class Intake extends SubsystemBase {
     
-    DoubleSolenoid doublePCM1 = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, Constants.Intake.soleinoid_one_forward, Constants.Intake.soleinoid_one_backward); // Add ports later
-    DoubleSolenoid doublePCM2 = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, Constants.Intake.soleinoid_two_forward, Constants.Intake.soleinoid_two_backward); // Add ports later
+    DoubleSolenoid doublePCM1 = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, Constants.Intake.soleinoid_one_forward, Constants.Intake.soleinoid_one_backward);
+    DoubleSolenoid doublePCM2 = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, Constants.Intake.soleinoid_two_forward, Constants.Intake.soleinoid_two_backward);
     Compressor pcmCompressor = new Compressor(0, PneumaticsModuleType.CTREPCM);
 
     CANSparkMax neoMotor = new CANSparkMax(Constants.Intake.intake_motor, CANSparkMax.MotorType.kBrushless);
 
     public Intake() {
-        pcmCompressor.enableDigital();
     }
+
+    public void periodic() {
+        pcmCompressor.enableDigital();
+    } 
 
     public void suckBalls(double speed) {
         doublePCM1.set(Value.kForward);
@@ -35,6 +38,11 @@ public class Intake extends SubsystemBase {
 
         neoMotor.set(speed);
     }
-
+    
+    public void stopBlowing() {
+        neoMotor.set(0);
+        doublePCM1.set(Value.kReverse);
+        doublePCM2.set(Value.kReverse);
+    }
 
 }
