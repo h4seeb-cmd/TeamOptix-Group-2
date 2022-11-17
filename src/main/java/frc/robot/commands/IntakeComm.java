@@ -6,16 +6,13 @@ package frc.robot.commands;
 
 import frc.robot.subsystems.ExampleSubsystem;
 import frc.robot.subsystems.Intake;
+import frc.robot.Constants;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 
 /** An example command that uses an example subsystem. */
 public class IntakeComm extends CommandBase {
   @SuppressWarnings({"PMD.UnusedPrivateField", "PMD.SingularField"})
-<<<<<<< HEAD
   private final Intake mintake;
-=======
-  private final Intake intake;
->>>>>>> 1d4f12d43e0364eb263a10e0cb37b63e561e0a84
 
   /**
    * Creates a new ExampleCommand.
@@ -23,11 +20,7 @@ public class IntakeComm extends CommandBase {
    * @param subsystem The subsystem used by this command.
    */
   public IntakeComm(Intake subsystem) {
-<<<<<<< HEAD
     mintake = subsystem;
-=======
-    intake = subsystem;
->>>>>>> c08847381f0c060a625624a19f71664e9bbafe5f
     // Use addRequirements() here to declare subsystem dependencies.
     addRequirements(mintake);
 
@@ -41,7 +34,7 @@ public class IntakeComm extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    mintake.suckBalls();
+    mintake.suckBalls(Constants.Intake.intake_speed);
   }
 
   // Called once the command ends or is interrupted.
