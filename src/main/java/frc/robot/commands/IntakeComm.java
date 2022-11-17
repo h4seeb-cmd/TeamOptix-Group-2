@@ -19,7 +19,11 @@ public class IntakeComm extends CommandBase {
    * @param subsystem The subsystem used by this command.
    */
   public IntakeComm(Intake subsystem) {
+<<<<<<< HEAD
     mintake = subsystem;
+=======
+    intake = subsystem;
+>>>>>>> c08847381f0c060a625624a19f71664e9bbafe5f
     // Use addRequirements() here to declare subsystem dependencies.
     addRequirements(mintake);
 
