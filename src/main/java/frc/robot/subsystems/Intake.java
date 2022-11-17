@@ -29,11 +29,11 @@ public class Intake extends SubsystemBase {
         pcmCompressor.enableDigital();
     }
 
-    public void suckBalls() {
+    public void suckBalls(double speed) {
         doublePCM1.set(Value.kForward);
         doublePCM2.set(Value.kForward);
 
-        neoMotor.set(0);
+        neoMotor.set(speed);
     }
 
 
