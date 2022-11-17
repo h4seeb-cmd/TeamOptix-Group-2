@@ -11,7 +11,7 @@ import edu.wpi.first.wpilibj2.command.CommandBase;
 /** An example command that uses an example subsystem. */
 public class IntakeComm extends CommandBase {
   @SuppressWarnings({"PMD.UnusedPrivateField", "PMD.SingularField"})
-  private final IntakeComm intake;
+  private final Intake intake;
 
   /**
    * Creates a new ExampleCommand.
