@@ -13,11 +13,6 @@ import edu.wpi.first.wpilibj2.command.CommandBase;
 public class IntakeComm extends CommandBase {
   @SuppressWarnings({"PMD.UnusedPrivateField", "PMD.SingularField"})
   private final Intake mintake;
-<<<<<<< HEAD
-
-=======
->>>>>>> cc184cb310086a4f28b4e4e1135720f20fb7a547
-
   /**
    * Creates a new ExampleCommand.
    *
