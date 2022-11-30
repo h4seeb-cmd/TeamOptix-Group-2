@@ -4,9 +4,12 @@
 
 package frc.robot;
 
+import javax.naming.ConfigurationException;
+
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.XboxController.Button;
+
 import frc.robot.commands.ExampleCommand;
 import frc.robot.commands.IntakeComm;
 import frc.robot.subsystems.ExampleSubsystem;
@@ -25,9 +28,10 @@ public class RobotContainer {
   private final Intake intakeSubsystem = new Intake();
   private final IntakeComm intakeCommand = new IntakeComm(intakeSubsystem);
 
-  /** The container for the robot. Contains subsystems, OI devices, and commands. */
+
+  // rename o drivetrain (f2 shortcut)
+    private final Drivetrain drivetrain = new Drivetrain();
   public RobotContainer() {
-    // Configure the button bindings
     configureButtonBindings();
   }
 
@@ -36,12 +40,12 @@ public class RobotContainer {
    * instantiating a {@link GenericHID} or one of its subclasses ({@link
    * edu.wpi.first.wpilibj.Joystick} or {@link XboxController}), and then passing it to a {@link
    * edu.wpi.first.wpilibj2.command.button.JoystickButton}.
+
    */
   private void configureButtonBindings() {
     XboxController exBox = new XboxController(0);
     JoystickButton joySteck = new JoystickButton(exBox, Button.kLeftBumper.value);
     joySteck.whenHeld(intakeCommand);
-  }
 
   /**
    * Use this to pass the autonomous command to the main {@link Robot} class.

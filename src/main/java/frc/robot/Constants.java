@@ -13,6 +13,7 @@ package frc.robot;
  * constants are needed, to reduce verbosity.
  */
 public final class Constants {
+
     public static final class Intake {
         public static final int intake_motor = 21; //neo motor port should be changed
         public static final double intake_speed = 0.8;
