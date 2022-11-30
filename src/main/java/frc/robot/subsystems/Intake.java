@@ -19,19 +19,23 @@ import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 
 public class Intake extends SubsystemBase {
     
+    // Establish motors
     DoubleSolenoid doublePCM1 = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, Constants.Intake.soleinoid_one_forward, Constants.Intake.soleinoid_one_backward);
     DoubleSolenoid doublePCM2 = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, Constants.Intake.soleinoid_two_forward, Constants.Intake.soleinoid_two_backward);
     Compressor pcmCompressor = new Compressor(0, PneumaticsModuleType.CTREPCM);
 
     CANSparkMax neoMotor = new CANSparkMax(Constants.Intake.intake_motor, CANSparkMax.MotorType.kBrushless);
 
+    // Nothing needed for constructor
     public Intake() {
     }
 
+    // Enable compressor closed loop control using digital input
     public void periodic() {
         pcmCompressor.enableDigital();
     } 
 
+    // Pushes the intake forward
     public void suckBalls(double speed) {
         doublePCM1.set(Value.kForward);
         doublePCM2.set(Value.kForward);
@@ -39,6 +43,7 @@ public class Intake extends SubsystemBase {
         neoMotor.set(speed);
     }
     
+    // Pulls the intake back
     public void stopBlowing() {
         neoMotor.set(0);
         doublePCM1.set(Value.kReverse);
