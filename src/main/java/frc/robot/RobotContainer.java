@@ -30,7 +30,7 @@ public class RobotContainer {
 
 
   // rename o drivetrain (f2 shortcut)
-    private final Drivetrain drivetrain = new Drivetrain();
+  private final Drivetrain drivetrain = new Drivetrain();
   public RobotContainer() {
     configureButtonBindings();
   }
