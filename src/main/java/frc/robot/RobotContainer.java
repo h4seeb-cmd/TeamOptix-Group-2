@@ -27,6 +27,13 @@ public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   private final Intake intakeSubsystem = new Intake();
   private final IntakeComm intakeCommand = new IntakeComm(intakeSubsystem);
+<<<<<<< HEAD
+=======
+
+
+  // rename o drivetrain (f2 shortcut)
+  private final Drivetrain drivetrain = new Drivetrain();
+>>>>>>> 8cbf46822cde5d414bfd4750bbadb12e216c243c
   public RobotContainer() {
     // Configure the button bindings
     configureButtonBindings();
